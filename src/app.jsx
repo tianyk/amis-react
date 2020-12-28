@@ -10,41 +10,21 @@ class App extends Component {
 
 	render() {
 		const schema = {
-			type: 'page',
+			"type": "page",
 			"body": {
 				"type": "form",
+				"api": "https://houtai.baidu.com/api/mock2/form/saveForm",
 				"controls": [
 					{
-						"type": "number",
-						"name": "A-1",
-						"label": "A"
-					},
-					{
-						"type": "number",
-						"name": "B-1",
-						"label": "B"
-					},
-					{
-						"type": "number",
-						"name": "sum",
-						"label": "和",
-						"disabled": true,
-						"description": "自动计算 A + B"
-					},
-					{
-						"type": "formula",
-						"name": "sum",
-						"formula": `(function(data) {
-							var result = this['A-1'] + this['B-1'];
-							if (isFinite(result)) return result;
-							return null;
-						}.bind(this))(data);`
+						"type": "text",
+						"label": "常规",
+						"name": "text",
+						"required": true
 					}
 				]
 			}
 		};
 
-		// return (<h1>Hello, world!</h1>);
 		return renderAmis(schema);
 	}
 }

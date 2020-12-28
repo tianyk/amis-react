@@ -1,0 +1,28 @@
+{
+	"presets": [
+		[
+			"@babel/preset-env",
+			{
+				"targets": [
+					"Chrome >= 58",
+					"IE >= 9",
+					"Edge >= 16",
+					"Safari >= 10"
+				],
+				"useBuiltIns": "usage",
+				"corejs": 3
+			}
+		],
+		"@babel/preset-react",
+		"@babel/preset-typescript"
+	],
+	"plugins": [
+		[
+			"@babel/plugin-proposal-decorators",
+			{
+				"legacy": true
+			}
+		],
+		"@babel/plugin-proposal-optional-chaining"
+	]
+}
